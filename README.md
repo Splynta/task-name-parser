@@ -1,9 +1,24 @@
 #### Instructions
-After pulling the repo run composer install and then serve/host however you wish.
+```
+* clone the repo
+* run composer install
+* copy .env.example to .env
+* run php artisan key:generate
+* run php artisan serve
+```
 
 Navigate to the homepage and the csv will be processed and the json data will be displayed.
 
-Test suite can be ran with php artisan test command
+Test suite can be ran with **php artisan test** command
+
+#### Troubleshooting
+If there's an error regarding not having a database when you load the homepage, then change the .env values to
+
+```
+SESSION_DRIVER=file
+CACHE_STORE=file
+QUEUE_CONNECTION=sync
+```
 
 #### My Approach
 With this project i've left the homepage as the place to receive the data. I wanted to be able to iterate quickly and felt
